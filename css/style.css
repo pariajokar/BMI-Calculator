@@ -1,0 +1,192 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: inter-m;
+    src: url(../fonts/Inter-Medium.ttf);
+}
+
+@font-face {
+    font-family: inter-l;
+    src: url(../fonts/Inter-Light.ttf);
+}
+
+body {
+    cursor: none;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/backgroundImg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main>section {
+    width: 95%;
+    height: 90vh;
+    margin-top: 2%;
+}
+
+.header-sec {
+    width: 100%;
+    height: 15%;
+    background-color: rgba(16 18 27 / 55%);
+    backdrop-filter: blur(20px);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.header-sec>h1 {
+    font-size: 2.1rem;
+    color: white;
+    font-weight: 100;
+    margin-left: 5%;
+    padding-top: 1.5%;
+    font-family: inter-m;
+}
+
+.main-sec {
+    width: 100%;
+    height: 85%;
+    background-color: #251a47f1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    padding: 30px;
+    font-family: inter-l;
+}
+
+.main-sec>* {
+    border-radius: 14px;
+}
+
+.main-sec>div:nth-of-type(1) {
+    grid-row: 1/2;
+    grid-column: 1/3;
+}
+
+.weight-sec {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    height: 50vh;
+    background-color: rgb(146 151 179 / 13%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #e7e7e7;
+    font-size: 1.2rem;
+    font-family: inter-l;
+}
+
+.height-sec {
+    grid-column: 1/2;
+    grid-row: 4/6;
+    height: 40vh;
+    background-color: rgb(146 151 179 / 13%);
+    color: #e7e7e7;
+    font-size: 1.2rem;
+    font-family: inter-l;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.height-sec>div:nth-of-type(1) {
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.bmi {
+    grid-row: 2/6;
+    grid-column: 2/3;
+    background-color: rgb(146 151 179 / 13%);
+    width: 100%;
+    color: #e7e7e7;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px
+}
+
+.content-wrapper-header {
+    width: 100%;
+    height: 30vh;
+    display: grid;
+    align-items: center;
+    color: #e7e7e7;
+    padding: 20px 40px;
+    animation: animateBg 15s infinite linear;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png"), linear-gradient(to right top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+}
+
+.content-wrapper-header>h1 {
+    font-weight: normal;
+}
+
+@keyframes animateBg {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.weightSlider {
+    width: 50%;
+    height: 6px;
+}
+
+.valOutput {
+    margin: 25px auto 25px auto;
+    font-size: 50px;
+}
+
+.heightSlider {
+    transform: rotate(90deg);
+}
+
+#bmioutput {
+    font-size: 100px;
+    background: linear-gradient(to right top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+#catoutput {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#chartdiv {
+    width: 100%;
+    height: 40vh;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    pointer-events: none;
+    position: fixed;
+    z-index: 99999999;
+    background: linear-gradient(to right top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+}

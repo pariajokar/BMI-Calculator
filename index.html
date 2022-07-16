@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onmousemove="_move(event)">
+
+
+
+    <main>
+
+        <div class="cursor"></div>
+        <section>
+            <section class="header-sec">
+                <h1>
+                    BMI Calculator</h1>
+            </section>
+            <section class="main-sec">
+
+                <div class="content-wrapper-header">
+                    <h2>What is BMI?</h2>
+                    <div>
+                        <p class="para">Body Mass Index (BMI) is a measure of body fat derived on the basis of an adult man or woman’s height and weight. BMI is a major determinant of one’s obesity or leanness. Moreover, BMI is a reliable and quick way of gauging the
+                            health of a person. It is a cost-effective and simple method of screening the categories of weight that may lead to medical problems in the near-future.</p>
+                    </div>
+                </div>
+
+
+                <div class="weight-sec">
+
+                    <h1>Weight</h1>
+                    <p>Select your weight in KG</p>
+                    <input type="range" min="30" max="150" value="" class="weightSlider" id="weightInput" onchange="furmola()">
+                    <p><span class="valOutput" id="weightVal"></span>kg</p>
+                </div>
+
+
+
+
+                <div class="height-sec">
+
+                    <div>
+                        <h1>Height</h1>
+                        <p>Select your height in CM</p>
+                        <p><span class="valOutput" id="heightVal"></span>cm</p>
+
+                    </div>
+                    <div>
+                        <input type="range" min="140" max="210" value="" class="heightSlider" id="heightInput" onchange="furmola()">
+                    </div>
+                </div>
+
+
+                <div class="bmi">
+                    <h3 class="wHead">BMI score</h3>
+                    <div id="bmioutput"></div>
+                    <div id="catoutput"></div>
+                </div>
+
+
+
+            </section>
+        </section>
+
+    </main>
+
+
+
+    <script src="js/master.js">
+    </script>
+</body>
+
+
+</html>
